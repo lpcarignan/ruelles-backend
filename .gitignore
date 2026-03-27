@@ -15,7 +15,19 @@ export
 export.zip
 coverage
 
-# Local files with Stripe API Keys, Database conenctivity
+# misc
 environmentVariables.*.json
+
+.vscode/
+.DS_Store
+.env.local
 .env.dev
 .env.prod
+/.env.development*
+/.env.test
+/.env.production*
+/.env.production
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
