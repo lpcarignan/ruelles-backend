@@ -1,0 +1,21 @@
+# package directories
+node_modules
+
+# Serverless directories
+.serverless
+
+# VS Code folder
+.vscode/
+
+# Build folder
+.build
+
+# Export folder and zip
+export 
+export.zip
+coverage
+
+# Local files with Stripe API Keys, Database conenctivity
+environmentVariables.*.json
+.env.dev
+.env.prod
