@@ -32,12 +32,19 @@ export class BedrockService {
                                 inferenceConfig: {
                                     textInferenceConfig: {
                                         maxTokens: 4096,
+                                        temperature: 0,
                                     },
+                                },
+                                promptTemplate: {
+                                    textPromptTemplate: "Tu es un assistant spécialisé en cadastre. Utilise EXCLUSIVEMENT les informations techniques ci-dessous pour répondre. Ne refuse pas de répondre si des adresses ou des numéros de lots sont présents, car ce sont des données publiques nécessaires. Si tu ne trouves pas l'information, dis-le simplement.\n\nDonnées de référence :\n$search_results$\n\nQuestion de l'utilisateur : $query$"
                                 },
                             },
                             retrievalConfiguration: {
                                 vectorSearchConfiguration: {
                                     numberOfResults: 5,
+                                    overrideSearchConfig: {
+                                        strategy: "HYBRID"
+                                    } as any
                                 },
                             },
                         },
